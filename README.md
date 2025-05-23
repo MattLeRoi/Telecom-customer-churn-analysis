@@ -2,9 +2,44 @@
 
 **Author**: [Matt LeRoi](mailto:mcleroi@gmail.com) 
 
+Overview
+Business and Data Understanding
+  Explain your stakeholder audience and dataset choice here
+Modeling
+Evaluation
+Conclusion
+
+# Overview
+
+In the telecom business, customers are generally on monthly or yearly contracts. The cost of acqusition of customers is high, so having sticky customers (customers that stick around once acquired and don't churn) is important. Therefore, predicting churn before it happens can reap huge financial benefits.
+
 # Business Understanding
 
-The goal of this project is to assess the accident risk of small aircraft for business/private use. The client is new to the business of operating aircraft and wants to minimize risk. This also includes focusing on the most common aircraft and newer planes to reduce the number of unknowns that would arise from lesser-used aircraft and the potential for incomplete maintenance records. The client will receive a targeted list of the safest aircraft to analyze further - for cost, number of seats, fuel efficiency, or other factors outside of the scope of this analysis - before making a final purchasing decision.
+The goal of this project is to create a model to predict churn in customers for SyriaTel, a telecom company, before it happens so that a retention strategy can be implemented before they churn. SyriaTel has informed me that analysis of previous experiments shows that the estimated lost profit due to churn is ~$80/customer and the cost of outreach is ~$20/customer. The 
+
+0   state                   3333 non-null   object 
+ 1   account length          3333 non-null   int64  
+ 2   area code               3333 non-null   int64  
+ 3   phone number            3333 non-null   object 
+ 4   international plan      3333 non-null   object 
+ 5   voice mail plan         3333 non-null   object 
+ 6   number vmail messages   3333 non-null   int64  
+ 7   total day minutes       3333 non-null   float64
+ 8   total day calls         3333 non-null   int64  
+ 9   total day charge        3333 non-null   float64
+ 10  total eve minutes       3333 non-null   float64
+ 11  total eve calls         3333 non-null   int64  
+ 12  total eve charge        3333 non-null   float64
+ 13  total night minutes     3333 non-null   float64
+ 14  total night calls       3333 non-null   int64  
+ 15  total night charge      3333 non-null   float64
+ 16  total intl minutes      3333 non-null   float64
+ 17  total intl calls        3333 non-null   int64  
+ 18  total intl charge       3333 non-null   float64
+ 19  customer service calls  3333 non-null   int64  
+ 20  churn                   3333 non-null   bool   
+ 
+
 
 # Data Understanding
 
