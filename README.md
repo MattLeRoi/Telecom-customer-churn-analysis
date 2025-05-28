@@ -28,7 +28,7 @@ The final logistic regression model achieved a profit of $1300, correctly identi
 
 The final hypertuned decision tree classifier model outperformed the logistic regression model, achieving a profit of $4180 after hypertuning, correctly identifying 83 out of 101 churning customers, with 40 falsely identified churning customers. 
 
-![Bar_chart.png](./Images/Classification_tree.png)
+![Classification_tree.png](./Images/Classification_tree.png)
 
 ## Limitations
 
