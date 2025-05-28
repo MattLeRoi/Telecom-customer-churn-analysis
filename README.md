@@ -8,7 +8,10 @@ In the telecom business, customers are generally on monthly or yearly contracts.
 
 # Business Understanding
 
-The goal of this project is to create a model to predict churn in customers for SyriaTel, a telecom company. If customer churn can be identified before it happens, a retention strategy can be implemented before they churn. According to SyriaTel, the estimated lost profit due to churn is ~$80/customer and the cost of outreach is ~$20/customer. The cost of simply reaching out to all customers would be a net loss of $28,000, so accurate prediction of customers likely to churn will be extremely valuable here. If one customer is correctly identified out of every four customers flagged for potential churn, this project will be net neutral. The model will seek a much higher bar than that, however, and will optimize for maximum profit.
+The goal of this project is to create a model to predict churn in customers for SyriaTel, a telecom company. If customer churn can be identified before it happens, a retention strategy can be implemented before they churn. According to SyriaTel, the estimated lost profit due to churn is ~$240/customer and reaching out to a customer about to churn is ~⅓ effective, so the average profit from reaching out to a customer about to churn is ~$80. The cost of outreach is ~$20/customer. The cost of simply reaching out to all customers and retaining ⅓ of those about to churn would be a net loss of $28,000, so accurate prediction of customers likely to churn will be extremely valuable here. If one customer is correctly identified out of every four customers flagged for potential churn, this project will be net neutral. The model will seek a much higher bar than that, however, and will optimize for maximum profit.
+
+# Data
+SyriaTel provided a subset of customer data. It included: 1 geographical location, 3 area codes, 3333 total customers, and 486 churning customers, with a 14.5% churn rate.
 
 # Modeling
 
@@ -16,14 +19,14 @@ Two models were created for this project: a logistic regression model and a deci
 
 # Evaluation
 
-The goal of this project is financial, to increase profits for SyriaTel. The recall and precision scores are relevant, as we are trying to identify as many of the churning customers as possible (recall rate) while limiting the number of customers we reach out to unnecessarily (precision rate). To combine these two scores, I have taken the estimate provided by SyraiTel to directly calculate the actual financial impact to the company. Each correctly identified churning customer (True Positive, TP) is worth $80 and every person SyriaTel reaches out to costs $20 (True Positie plus False Positive, TP+FP). The final evaluation criterion is then: $80TP + $20*(TP+FP), which is the total profit (or loss) of the experiment.
+The goal of this project is financial, to increase profits for SyriaTel. The recall and precision scores are relevant, as we are trying to identify as many of the churning customers as possible (recall rate) while limiting the number of customers we reach out to unnecessarily (precision rate). To combine these two scores, I have taken the estimate provided by SyraiTel to directly calculate the actual financial impact to the company. Each correctly identified churning customer (True Positive, TP) is worth $80 on average, and every person SyriaTel reaches out to (True Positive plus False Positive, TP+FP) costs $20. The final evaluation criterion is then: $80TP + $20*(TP+FP), which is the total profit (or loss) of the experiment.
 
 
 # Conclusion
 
-The logistic regression model achieved a profit of $1660 after scaling and oversampling, correctly identifying 46 out of 101 churning customers, with 55 falsely identified churning customers. 
+The final logistic regression model achieved a profit of $1300, correctly identifying 35 out of 101 churning customers, with 40 falsely identified churning customers. This is a positive result, literally, with a positive dollar value associated with it, but identifying roughly a third of the churning customers is not nearly as accurate as I would like.
 
-The final hypertuned decision tree classifier model outperformed the logistic regression model, achieving a profit of $4260 after hypertuning, correctly identifying 74 out of 101 churning customers, with 9 falsely identified churning customers. 
+The final hypertuned decision tree classifier model outperformed the logistic regression model, achieving a profit of $4180 after hypertuning, correctly identifying 83 out of 101 churning customers, with 40 falsely identified churning customers. 
 
 ![Bar_chart.png](./Images/Bar_chart.png)
 
@@ -37,53 +40,10 @@ The model provided should yield positive results. However, broader data, coverin
 
 
 
-> 264.45 day minutes, <= 6.5 voice mails, >184.65 eve min, > 114.5 night minutes = [2,80]
-> 264.45 day minutes, > 6.5 voice mails = [38,5]
-Don’t know why less voice mails means more churn. Also, at each stage, more minutes increases churn.
+> 255 day minutes,no voice mail plan, >162 eve min = [27,268]
+< 174 day minutes, >3 customer service calls = [13,202]
+< 223 day minutes,  >3 customer service calls, no international plan = [1467,177]
 
-<= 264.45 day minutes, > 3.5 customer service calls, <=160.2 day minutes = [10,72]
-More customer service calls is prob bad.
-
-<= 264.45 day minutes, <= 3.5 customer service calls, with intl plan, <= 2.5 calls [0,39]
-People with international plan that don’t use it will churn. Maybe offer to cancel the international part of their plan when you notice they’re not using it? 
-
-
-<= 264.45 day minutes, <= 3.5 customer service calls, with intl plan, > 2.5 intl calls,>13.1 min [0,32]
-Lower general usage, but higher than average international calls and higher international minutes causes churn. Maybe per minute cost is too high?
-
-<= 264.45 day minutes, <= 3.5 customer service calls, with intl plan, > 2.5 intl calls,<=13.1 min [142,7]
-Higher number of short calls - seems like people are happy. 
-
-
-## Recommendations
-
-More data to refine the model to identify customers likely to churn more accurately.
-Refinement of the outreach strategy - experiments can be run to determine the effectiveness vs cost of sending emails, making phone calls, offering discounts, etc. Analysis can also be perfomed to determine which outreach strategies are the most effective for different customer profiles (more models!).
-
-
-The following aircraft are recommended for further study:
-
-Single engine aircraft:
-- CIRRUS DESIGN SR22T
-- PIPER PA-28-180
-- PIPER PA-28-181
-
-Dual engine aircraft:
-- BD-100-1A10
-- LEARJET INC 45
-- BEECH 95-B55 (T42A)
-- PIPER PA-23-250
-
-## Next Steps
-
-The recommended aircraft should be further analyzed for other factors, including:
-- Acquisition cost
-- Maintenance cost
-- Fuel cost
-- Staffing requirements
-- Lifetime of aircraft / performance over time
-- Availability of pilots and crew
-- Seating capacity
 
 ## For More Information
 
