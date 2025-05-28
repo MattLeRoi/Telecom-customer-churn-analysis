@@ -28,24 +28,21 @@ The final logistic regression model achieved a profit of $1300, correctly identi
 
 The final hypertuned decision tree classifier model outperformed the logistic regression model, achieving a profit of $4180 after hypertuning, correctly identifying 83 out of 101 churning customers, with 40 falsely identified churning customers. 
 
-![Classification_tree.png](./Images/Classification_tree.png)
-
-
-
 ## Limitations
 
 The available data covers a small number of customers and only includes basic usage and account data. It appears that there is enough to be useful, but more detailed data could be extremely helpful to refine the model further. Also, the financial evaluation is based on rough estimates, so further experimentation can refine the evaluation criteria.
 
 ## Recommendations
 
-The model provided should yield positive results. However, broader data, covering more of SyriaTel’s customers and containing more varied and detailed information, should help refine the model. Also, 
+The model provided should yield positive results. Broader data, however, covering more of SyriaTel’s customers and containing more varied and detailed information, should help refine the model. Also, a few insights from how the classification tree was built:
 
+Customers with high usage and no voice mail plan churned at a very high rate, ~90%. I recommend looking into this group further. Is this line only used for a specific purpose and then closed? These could be high value customers since their usage is high, so the rewards for solving their high churn rate could be great.
 
+Customers with low usage and high customer service calls churned at a high rate, unsurprisingly. Looking for patterns in customer service calls may lead to better customer engagement with more usage and greater retention.
 
-> 255 day minutes,no voice mail plan, >162 eve min = [27,268]
-< 174 day minutes, >3 customer service calls = [13,202]
-< 223 day minutes,  >3 customer service calls, no international plan = [1467,177]
+Finally, customers with low usage, few customer service calls, and no international plan stayed at a relatively high rate. Generally speaking, customers with higher usage churned at a higher rate in several points in the tree. It may be worth looking into pricing strategies that reward greater use rather than a flat per-minute rate. This could help retain the high value customers and prompt other customers to use the service more.
 
+![Classification_tree.png](./images/Classification_tree.png)
 
 ## For More Information
 
