@@ -30,7 +30,7 @@ The final hypertuned decision tree classifier model outperformed the logistic re
 
 ## Limitations
 
-The available data covers a small number of customers and only includes basic usage and account data. It appears that there is enough to be useful, but more detailed data could be extremely helpful to refine the model further. Also, the financial evaluation is based on rough estimates, so further experimentation can refine the evaluation criteria.
+The available data covers a small number of customers in one geographical area and only includes basic usage and account data. It appears that there is enough to be useful, but more detailed data could be extremely helpful to refine the model further. Also, the financial evaluation is based on rough estimates, so further experimentation can refine the evaluation criteria.
 
 ## Recommendations
 
