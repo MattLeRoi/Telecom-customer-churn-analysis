@@ -46,14 +46,13 @@ Finally, customers with low usage, few customer service calls, and no internatio
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./Aircraft_safety.ipynb), review this [presentation](./Slides.pdf), or peruse this [dashboard](https://public.tableau.com/app/profile/matthew.leroi/viz/Aircraft_safety/Dashboard?publish=yes).
+See the full analysis in the [Jupyter Notebook](./phase3_project.ipynb) and [presentation](./Slides.pdf).
 
 For additional info, contact Matt LeRoi at [mcleroi@gmail.com](mailto:mcleroi@gmail.com)
 
 ```
-├── data
 ├── images
 ├── README.md
 ├── Slides.pdf
-└── Aircraft_safety.ipynb
+└── phase3_project.ipynb
 ``` 
