@@ -26,7 +26,7 @@ The goal of this project is financial, to increase profits for SyriaTel. The rec
 
 The final logistic regression model achieved a profit of $1300, correctly identifying 35 out of 101 churning customers, with 40 falsely identified churning customers. This is a positive result, literally, with a positive dollar value associated with it, but identifying roughly a third of the churning customers is not nearly as accurate as I would like.
 
-The final hypertuned decision tree classifier model outperformed the logistic regression model, achieving a profit of $4180 after hypertuning, correctly identifying 83 out of 101 churning customers, with 40 falsely identified churning customers. 
+The final hypertuned decision tree classifier model outperformed the logistic regression model, achieving a profit of $4180 after hypertuning, correctly identifying 75 out of 101 churning customers, with 16 falsely identified churning customers. 
 
 ## Limitations
 
@@ -46,13 +46,13 @@ Finally, customers with low usage, few customer service calls, and no internatio
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./phase3_project.ipynb) and [presentation](./Slides.pdf).
+See the full analysis in the [Jupyter Notebook](./notebook.ipynb).
 
 For additional info, contact Matt LeRoi at [mcleroi@gmail.com](mailto:mcleroi@gmail.com)
 
 ```
 ├── images
+├── data
 ├── README.md
-├── Slides.pdf
-└── phase3_project.ipynb
+└── noteboook.ipynb
 ``` 
