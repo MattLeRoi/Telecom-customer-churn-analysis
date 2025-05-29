@@ -46,13 +46,13 @@ Finally, customers with low usage, few customer service calls, and no internatio
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./phase3_project.ipynb) and [presentation](./Slides.pdf).
+See the full analysis in the [Jupyter Notebook](./notebook.ipynb).
 
 For additional info, contact Matt LeRoi at [mcleroi@gmail.com](mailto:mcleroi@gmail.com)
 
 ```
 ├── images
+├── data
 ├── README.md
-├── Slides.pdf
-└── phase3_project.ipynb
+└── noteboook.ipynb
 ``` 
